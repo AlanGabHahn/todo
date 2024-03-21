@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\{ User };
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Task>
@@ -15,9 +16,19 @@ class TaskFactory extends Factory
      * @return array<string, mixed>
      */
     public function definition(): array
-    {
+    {   
+        $user = User::all()->random();
+
+        while (count($user->categories) == 0) {
+            $user = User::all()->random();
+        }
+
         return [
-            
+            'title' => $this->faker->text(10),
+            'description' => $this->faker->text(30),
+            'due_date' => $this->faker->dateTime(),
+            'user_id' => $user,
+            'category_id' => $user->categories->random()
         ];
     }
 }
