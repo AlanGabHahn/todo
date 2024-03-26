@@ -21,6 +21,14 @@
                     Criar Tarefa
                 </a>
             </nav>
+            <main>
+                <section class="graph">
+                    Gráfico
+                </section>
+                <section class="list">
+                    Lista
+                </section>
+            </main>
         </div>
     </div>
 </body>
