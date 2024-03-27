@@ -23,7 +23,14 @@
             </nav>
             <main>
                 <section class="graph">
-                    Gráfico
+                    <div class="graph-header">
+                        <h2>Progresso do dia</h2>
+                        <hr>
+                        Data 
+                    </div>
+                    <div class="graph-header-subtitle">
+                        Tarefas: <b>3/6</b> 
+                    </div>
                 </section>
                 <section class="list">
                     Lista

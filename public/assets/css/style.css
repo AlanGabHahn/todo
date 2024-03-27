@@ -60,6 +60,27 @@ main {
 }
 
 section.graph {
-    background-color: cadetblue;
     width: 33%;
+    height: 100%;
+}
+
+/* .graph-header {
+    display: flex;
+    justify-content: space-between;
+} */
+
+h2 {
+    flex: 1;
+    display: inline-block;
+}
+
+hr {
+    flex: 1;
+    width: 50px;
+    height: 1px;
+    display: inline-block;
+}
+
+.graph-header-subtitle {
+    margin-top: 10px;
 }
