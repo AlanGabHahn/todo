@@ -98,6 +98,7 @@ hr {
 
 .list {
     padding: 5px 15px;
+    flex: 1;
 }
 
 .list-header {
@@ -106,4 +107,39 @@ hr {
 
 .list-header-select {
 
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.priority, .actions {
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.task-title {
+    padding-left: 10px;
+    font-weight: bold;
 }
