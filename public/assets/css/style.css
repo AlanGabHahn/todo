@@ -62,12 +62,13 @@ main {
 section.graph {
     width: 33%;
     height: 100%;
+    padding: 5px;
 }
 
-/* .graph-header {
+.graph-header {
     display: flex;
     justify-content: space-between;
-} */
+}
 
 h2 {
     flex: 1;
@@ -75,12 +76,34 @@ h2 {
 }
 
 hr {
-    flex: 1;
-    width: 50px;
-    height: 1px;
-    display: inline-block;
+    width: 130px;
 }
 
 .graph-header-subtitle {
     margin-top: 10px;
+}
+
+.graph-placeholder {
+    background-color: #ccc;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+.graph-header-tasks-left {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.list {
+    padding: 5px 15px;
+}
+
+.list-header {
+    display: flex;
+}
+
+.list-header-select {
+
 }

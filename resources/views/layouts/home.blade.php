@@ -31,9 +31,16 @@
                     <div class="graph-header-subtitle">
                         Tarefas: <b>3/6</b> 
                     </div>
+                    <div class="graph-placeholder">
+                    </div>
+                    <p class="graph-header-tasks-left">Restam 3 tarefas para serem realizadas</p>
                 </section>
                 <section class="list">
-                    Lista
+                    <div class="list-header">
+                        <select class="list-header-select">
+                            <option value="#">Todas as tarefas</option>
+                        </select>
+                    </div>
                 </section>
             </main>
         </div>
