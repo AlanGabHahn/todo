@@ -121,7 +121,13 @@ hr {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5px;
+    padding: 30px 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--background-light);
+}
+
+.task:hover {
+    background-color: var(--background-light);
 }
 
 .title {
@@ -131,12 +137,22 @@ hr {
 }
 
 .priority, .actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     flex: 1;
 }
 
 .actions {
     display: flex;
     justify-content: flex-end;
+}
+
+.sphere {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 .task-title {
