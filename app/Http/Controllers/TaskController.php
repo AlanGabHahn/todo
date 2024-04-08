@@ -14,6 +14,16 @@ class TaskController extends Controller
         //
     }
 
+    public function create(Request $request)
+    {
+        return view('tasks.create');
+    }
+
+    public function edit(Request $request)
+    {
+        return view('tasks.edit');
+    }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -43,6 +53,6 @@ class TaskController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return redirect(route('home'));
     }
 }

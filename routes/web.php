@@ -15,9 +15,10 @@ use App\Http\Controllers\{HomeController, AuthController, TaskController};
 */
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/task', [TaskController::class, 'index'])->name('task');
-Route::get('/task/create', [TaskController::class, 'create'])->name('task.create');
-Route::get('/task/edit', [TaskController::class, 'edit'])->name('task.edit');
+Route::get('/task', [TaskController::class, 'index'])->name('tasks');
+Route::get('/task/create', [TaskController::class, 'create'])->name('tasks.create');
+Route::get('/task/edit', [TaskController::class, 'edit'])->name('tasks.edit');
+Route::delete('task/delete', [TaskController::class, 'destroy'])->name('tasks.delete');
 
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');

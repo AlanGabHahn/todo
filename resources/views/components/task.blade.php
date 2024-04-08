@@ -14,10 +14,10 @@
         <div>{{ $data['category'] ?? '' }}</div>
     </div>
     <div class="actions">
-        <a href="tasks/edit/{{ $data['id'] }} ">
+        <a href="{{ route('tasks.edit') }}">
             <img src="/assets/images/icon-edit.png">
         </a> 
-        <a href="tasks/delete/{{ $data['id'] }} ">
+        <a href="{{ route('tasks.delete') }}">
             <img src="/assets/images/icon-delete.png">
         </a>
     </div>
