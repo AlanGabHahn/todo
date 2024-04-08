@@ -16,7 +16,8 @@ use App\Http\Controllers\{HomeController, AuthController, TaskController};
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/task', [TaskController::class, 'index'])->name('task');
-Route::get('/task/new', [TaskController::class, 'create'])->name('task.create');
+Route::get('/task/create', [TaskController::class, 'create'])->name('task.create');
+Route::get('/task/edit', [TaskController::class, 'edit'])->name('task.edit');
 
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');

@@ -1,8 +1,10 @@
 <x-layout page="App Todo: Login">
     <x-slot:btn>
-        <a href="#" class="btn btn-primary">
+        <a href="{{ route('register') }}" class="btn btn-primary">
             Registre-se
         </a>
     </x-slot:btn>
     tela de login
+
+    <a href="{{ route('home') }}">Ir para home</a>
 </x-layout>
