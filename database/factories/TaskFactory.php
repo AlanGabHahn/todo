@@ -27,6 +27,7 @@ class TaskFactory extends Factory
             'title' => $this->faker->text(10),
             'description' => $this->faker->text(30),
             'due_date' => $this->faker->dateTime(),
+            'is_done' => $this->faker->boolean(),
             'user_id' => $user,
             'category_id' => $user->categories->random()
         ];
