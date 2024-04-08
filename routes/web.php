@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{HomeController, AuthController, TaskController};
 
 /*
 |--------------------------------------------------------------------------
@@ -12,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/task', [TaskController::class, 'index'])->name('task');
+Route::get('/task/new', [TaskController::class, 'create'])->name('task.create');
 
-Route::get('/login', function () {
-    return view('login');
-});
+
+Route::get('/login', [AuthController::class, 'index'])->name('login');
+Route::get('/register', [AuthController::class, 'register'])->name('register');
