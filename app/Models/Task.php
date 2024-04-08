@@ -15,6 +15,7 @@ class Task extends Model
         'title',
         'description',
         'due_data',
+        'is_done',
         'user_id',
         'category_id'
     ];
@@ -30,11 +31,11 @@ class Task extends Model
     }
 
     /**
-     * Get the categories that owns the Task
+     * Get the category that owns the Task
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function categories(): BelongsTo
+    public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class, 'id');
     }
