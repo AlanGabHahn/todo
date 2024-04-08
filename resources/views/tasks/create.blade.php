@@ -4,5 +4,21 @@
             Voltar
         </a>
     </x-slot:btn>
-    Criar task
+    <section id="create-task">
+        <h1>Criar tarefa</h1>
+        <form action="">
+            <div class="input-area">
+                <label for="title">
+                    Título da tarefa:
+                </label>
+                <input type="text" name="title" placeholder="Digite o título da tarefa" required>
+            </div>
+            <div class="input-area">
+                <label for="title">
+                    Título da tarefa:
+                </label>
+                <input type="text" name="title" placeholder="Digite o título da tarefa" required>
+            </div>
+        </form>
+    </section>
 </x-layout>
