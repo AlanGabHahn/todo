@@ -226,7 +226,18 @@ h2 {
     margin-bottom: 5px;
 }
 
-.input-area>input {
+.input-area>input, .input-area>select {
     height: 40px;
     width: 400px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    padding: 5px 10px;
+}
+
+.input-area>textarea {
+    height: 120px;
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    padding: 5px 10px;
 }

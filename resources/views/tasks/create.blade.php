@@ -11,13 +11,27 @@
                 <label for="title">
                     Título da tarefa:
                 </label>
-                <input type="text" name="title" placeholder="Digite o título da tarefa" required>
+                <input type="text" id="title" name="title" placeholder="Digite o título da tarefa" required>
             </div>
             <div class="input-area">
-                <label for="title">
-                    Título da tarefa:
+                <label for="title" for="due_date">
+                    Data de realização:
                 </label>
-                <input type="text" name="title" placeholder="Digite o título da tarefa" required>
+                <input name="due_date" id="due_date" type="date" placeholder="Digite o título da tarefa" required>
+            </div>
+            <div class="input-area">
+                <label for="category">
+                    Categoria:
+                </label>
+                <select id="category" name="category" required>
+                    <option selected disable value="">Selecione a categoria</option>
+                </select>
+            </div>
+            <div class="input-area">
+                <label>
+                    Descrição da tarefa:
+                </label>
+                <textarea placeholder="Digite uma descrição para sua tarefa" name="description"></textarea>
             </div>
         </form>
     </section>
