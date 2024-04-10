@@ -7,7 +7,7 @@
     <section id="create-task">
         <h1>Criar tarefa</h1>
         <form action="">
-            <x-form.text_input name="title" label="Título da task" required="required" placeholder="Digite o título da tarefa"/>
+            <x-form.text_input name="title" label="Título da task" required="required" placeholder="Digite o título da tarefa:"/>
             <x-form.text_input type="date" name="due_date" label="Data de realização:" required="required"/>
             <div class="input-area">
                 <label for="category">
