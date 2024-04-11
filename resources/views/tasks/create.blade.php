@@ -28,7 +28,8 @@
                 placeholder="Digite uma descrição para sua tarefa"
             />
             <div class="input-area">
-                <button type="submit" class="btn btn-primary">Criar tarefa</button>
+                <x-form.button type="reset" class="btn" label="Resetar"/>
+                <x-form.button type="submit" class="btn btn-primary" label="Criar tarefa"/>
             </div>
         </form>
     </section>
