@@ -19,8 +19,10 @@
                 label="Data de realização:"
                 required="required"
             />
-            <x-form.select_input name="category" label="Categoria:" required="required">
-                <option value="">Teste</option>
+            <x-form.select_input name="category_id" label="Categoria:" required="required">
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->title }}</option>
+                @endforeach
             </x-form.select_input>
             <x-form.textarea
                 name="description"

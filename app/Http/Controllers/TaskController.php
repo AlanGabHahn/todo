@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Task;
+use App\Models\{
+    Task,
+    Category
+};
 
 class TaskController extends Controller
 {
@@ -19,7 +22,9 @@ class TaskController extends Controller
 
     public function create(Request $request)
     {
-        return view('tasks.create');
+        return view('tasks.create',[
+            'categories' => Category::all()
+        ]);
     }
 
     public function edit(Request $request)
