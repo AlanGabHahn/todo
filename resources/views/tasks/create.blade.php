@@ -27,10 +27,7 @@
                 label="Descrição da tarefa:"
                 placeholder="Digite uma descrição para sua tarefa"
             />
-            <div class="input-area">
-                <x-form.button type="reset" class="btn" label="Resetar"/>
-                <x-form.button type="submit" class="btn btn-primary" label="Criar tarefa"/>
-            </div>
+            <x-form.form_button />
         </form>
     </section>
 </x-layout>
