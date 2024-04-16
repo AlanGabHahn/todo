@@ -6,7 +6,8 @@
     </x-slot:btn>
     <section id="create-task">
         <h1>Criar tarefa</h1>
-        <form action="">
+        <form method="POST" action="{{ route('task.store') }}">
+            @csrf
             <x-form.text_input
                 name="title"
                 label="Título da task"

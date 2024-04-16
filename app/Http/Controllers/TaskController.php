@@ -37,7 +37,18 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->only([
+            'title',
+            'category_id',
+            'description',
+            'due_date'
+        ]);
+
+        $data['user_id'] = 1; /** remover após ter o login */
+
+        $task = Task::create($data);
+
+        return redirect(route('home'));
     }
 
     /**
