@@ -15,22 +15,29 @@
                 label="Título da task"
                 required="required"
                 placeholder="Digite o título da tarefa:"
+                value="{{ $task->title }}"
             />
             <x-form.text_input
                 type="date"
                 name="due_date"
                 label="Data de realização:"
                 required="required"
+                value="{{ $task->due_date }}"
             />
             <x-form.select_input name="category_id" label="Categoria:" required="required">
                 @foreach ($categories as $category)
-                    <option value="{{ $category->id }}">{{ $category->title }}</option>
+                    <option value="{{ $category->id }}"
+                       @if ($category->id  == $task->category_id)
+                           selected
+                       @endif
+                        >{{ $category->title }}</option>
                 @endforeach
             </x-form.select_input>
             <x-form.textarea
                 name="description"
                 label="Descrição da tarefa:"
                 placeholder="Digite uma descrição para sua tarefa"
+                value="{{ $task->description }}"
             />
             <x-form.form_button />
         </form>
