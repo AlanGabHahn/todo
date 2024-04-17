@@ -4,8 +4,10 @@
             Voltar
         </a>
     </x-slot:btn>
-    <section id="create-task">
+    <section id="task-section">
+
         <h1>Criar tarefa</h1>
+
         <form method="POST" action="{{ route('task.store') }}">
             @csrf
             <x-form.text_input
@@ -33,4 +35,5 @@
             <x-form.form_button />
         </form>
     </section>
+    
 </x-layout>

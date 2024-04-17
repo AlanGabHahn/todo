@@ -208,12 +208,12 @@ h2 {
     font-weight: bold;
 }
 
-#create-task {
+#task-section {
     margin: auto;
     padding-top: 20px;
 }
 
-#create-task>h1 {
+#task-section>h1 {
     text-align: center;
     margin-bottom: 20px;
 }
