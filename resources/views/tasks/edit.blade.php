@@ -10,6 +10,8 @@
 
         <form method="POST" action="{{ route('task.update') }}">
             @csrf
+
+            <input type="hidden" name="id" value="{{ $task->id }}" />
             <x-form.text_input
                 name="title"
                 label="Título da task"
@@ -39,7 +41,7 @@
                 placeholder="Digite uma descrição para sua tarefa"
                 value="{{ $task->description }}"
             />
-            <x-form.form_button />
+            <x-form.form_button label="Editar tarefa"/>
         </form>
     </section>
 

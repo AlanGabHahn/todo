@@ -75,9 +75,24 @@ class TaskController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        //
+        $data = $request->only([
+            'title',
+            'category_id',
+            'description',
+            'due_date'
+        ]);
+
+        $task = Task::find($request->id);
+
+        if (!$task) {
+            return 'Erro de tarefa não existente';
+        }
+
+        $task->update($data);
+        $task->save();
+        return redirect(route('home'));
     }
 
     /**

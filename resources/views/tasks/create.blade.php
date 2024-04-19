@@ -32,7 +32,7 @@
                 label="Descrição da tarefa:"
                 placeholder="Digite uma descrição para sua tarefa"
             />
-            <x-form.form_button />
+            <x-form.form_button label="Criar tarefa"/>
         </form>
     </section>
 
