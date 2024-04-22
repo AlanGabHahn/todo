@@ -98,8 +98,16 @@ class TaskController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
-    {
+    public function destroy(Request $request)
+    {   
+        $id = $request->id;
+
+        $task = Task::find($id);
+
+        if ($task) {
+            $task->delete();
+        }
+
         return redirect(route('home'));
     }
 }

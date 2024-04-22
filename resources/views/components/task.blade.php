@@ -16,7 +16,7 @@
     <div class="actions">
         <a href="{{ route('tasks.edit', ['id' => $data['id']]) }}">
             <img src="/assets/images/icon-edit.png">
-        </a> 
+        </a>
         <a href="{{ route('tasks.delete', ['id' => $data['id']]) }}">
             <img src="/assets/images/icon-delete.png">
         </a>

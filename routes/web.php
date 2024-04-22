@@ -20,7 +20,7 @@ Route::get('/task/create', [TaskController::class, 'create'])->name('tasks.creat
 Route::post('/task/store', [TaskController::class, 'store'])->name('task.store');
 Route::post('/task/update', [TaskController::class, 'update'])->name('task.update');
 Route::get('/task/edit/{id}', [TaskController::class, 'edit'])->name('tasks.edit');
-Route::delete('task/delete/{id}', [TaskController::class, 'destroy'])->name('tasks.delete');
+Route::get('task/delete/{id}', [TaskController::class, 'destroy'])->name('tasks.delete');
 
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
