@@ -65,14 +65,6 @@ class TaskController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      */
     public function update(Request $request)
@@ -81,8 +73,10 @@ class TaskController extends Controller
             'title',
             'category_id',
             'description',
-            'due_date'
+            'due_date',
         ]);
+
+        $data['is_done'] = $request->is_done ? true : false;
 
         $task = Task::find($request->id);
 
@@ -99,7 +93,7 @@ class TaskController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy(Request $request)
-    {   
+    {
         $id = $request->id;
 
         $task = Task::find($id);
