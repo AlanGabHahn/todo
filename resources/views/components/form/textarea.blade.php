@@ -7,5 +7,5 @@
         placeholder="{{ $placeholder ?? '' }}"
         name="{{ $name }}"
         required="{{ empty($required) ? 'required' : '' }}"
-    >{{ $value ?? '' }}"</textarea>
+    >{{ $value ?? '' }}</textarea>
 </div>
