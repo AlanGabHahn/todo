@@ -30,6 +30,13 @@
                 required="required"
                 placeholder="Sua senha"
             />
+            <x-form.text_input
+                type="password"
+                name="password_confirmation"
+                label="Confirme sua senha"
+                required="required"
+                placeholder="Confirme sua senha"
+            />
             <x-form.form_button label="Registrar-se"/>
         </form>
     </section>

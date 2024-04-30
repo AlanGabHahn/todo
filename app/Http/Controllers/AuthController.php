@@ -19,12 +19,20 @@ class AuthController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6|confirmed'
+        ]);
+
         $data = $request->only(
             'name',
             'email',
             'password'
         );
+
+        User::create($data);
         
-        $user = User::create($data);
+        return redirect(route('login'));
     }
 }
