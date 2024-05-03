@@ -8,6 +8,14 @@
 
         <h1>Registrar-se</h1>
 
+        @if ($errors->any())
+            <ul class="alert alert-error">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
+
         <form method="POST" action="{{ route('register.store') }}">
             @csrf
             <x-form.text_input
