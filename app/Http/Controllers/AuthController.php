@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\{
+    Hash,
+    Auth
+};
 
 class AuthController extends Controller
 {
@@ -18,6 +22,10 @@ class AuthController extends Controller
             'email' => 'required|email',
             'password' => 'required|min:6'
         ]);
+
+        if(Auth::attempt($validator)) {
+            return redirect()->route('home');
+        }
         
     }
 
@@ -39,6 +47,8 @@ class AuthController extends Controller
             'email',
             'password'
         );
+
+        $data['password'] = Hash::make($data['password']);
 
         User::create($data);
         

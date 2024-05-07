@@ -29,7 +29,7 @@
                 placeholder="Sua senha"
             />
           
-            <x-form.form_button label="Registrar-se"/>
+            <x-form.form_button label="Logar-se"/>
         </form>
     </section>
 </x-layout>
