@@ -91,7 +91,7 @@ class TaskController extends Controller
 
     public function checkedTask(Request $request)
     {
-
+        dd($request->all());
     }
 
     /**
