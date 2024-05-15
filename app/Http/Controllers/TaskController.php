@@ -89,6 +89,11 @@ class TaskController extends Controller
         return redirect(route('home'));
     }
 
+    public function checkedTask(Request $request)
+    {
+
+    }
+
     /**
      * Remove the specified resource from storage.
      */

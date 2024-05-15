@@ -39,4 +39,21 @@
             @endforeach
         </div>
     </section>
+    <script>
+        async function checkedTask(element)
+        {
+            let status = element.checked;
+            let taskId = element.dataset.id;
+            let rawResult = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json',
+                    'accept': 'application/json'
+                },
+                body: JSON.stringify({status, taskId})
+            });
+            result = await rawResult.json();
+            
+        }
+    </script>
 </x-layout>

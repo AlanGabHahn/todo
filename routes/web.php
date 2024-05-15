@@ -18,9 +18,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/task/create', [TaskController::class, 'create'])->name('tasks.create');
     Route::post('/task/store', [TaskController::class, 'store'])->name('task.store');
     Route::post('/task/update', [TaskController::class, 'update'])->name('task.update');
+    Route::post('/task/checked', [TaskController::class, 'checked'])->name('task.checked');
     Route::get('/task/edit/{id}', [TaskController::class, 'edit'])->name('tasks.edit');
     Route::get('task/delete/{id}', [TaskController::class, 'destroy'])->name('tasks.delete');
 
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-    
+
 });
