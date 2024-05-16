@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="graph-header-subtitle">
-            Tarefas: <b>3/6</b> 
+            Tarefas: <b>3/6</b>
         </div>
         <div class="graph-placeholder">
         </div>
@@ -54,7 +54,11 @@
                 body: JSON.stringify({status, taskId, _token: '{{ csrf_token() }}'})
             });
             result = await rawResult.json();
-
+            if (result.success) {
+                alert('Tarefa atualizada com sucesso!');
+            } else {
+                element.checked = !status;
+            }
         }
     </script>
 </x-layout>
