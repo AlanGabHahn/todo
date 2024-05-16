@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        $tasks = Task::all()->take(5);
+        $tasks = Task::whereDate('due_date', date('Y-m-d'))->get();
 
         return view('home', ['tasks' => $tasks]);
     }
