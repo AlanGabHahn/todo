@@ -9,8 +9,17 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        $tasks = Task::whereDate('due_date', date('Y-m-d'))->get();
+        $filteredDate = isset($request->date) ? $request->date : date('Y-m-d');
 
-        return view('home', ['tasks' => $tasks]);
+        $data['date_string'] = '16 de maio';
+        $data['date_prev_button'] = '2024-05-15';
+        $data['date_next_button'] = '2024-05-17';
+
+        $data['tasks'] = Task::whereDate('due_date', $filteredDate)->get();
+
+        $data['tasks_count'] = $data['tasks']->count();
+        $data['undone_tasks_count'] = $data['tasks']->where('is_done', false)->count();
+
+        return view('home',  $data);
     }
 }
