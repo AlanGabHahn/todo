@@ -13,8 +13,8 @@ class HomeController extends Controller
         $filteredDate = isset($request->date) ? $request->date : date('Y-m-d');
 
         $carbonDate = Carbon::createFromDate($filteredDate);
-
-        $data['date_string'] = $carbonDate->format('d \d\e M');
+        
+        $data['date_string'] = $carbonDate->translatedFormat('d'). ' de ' .ucfirst($carbonDate->translatedFormat('M'));
         $data['date_prev_button'] = $carbonDate->addDay(-1)->format('Y-m-d');
         $data['date_next_button'] = $carbonDate->addDay(2)->format('Y-m-d');
 
