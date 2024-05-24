@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Task;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -11,9 +12,11 @@ class HomeController extends Controller
     {
         $filteredDate = isset($request->date) ? $request->date : date('Y-m-d');
 
-        $data['date_string'] = '16 de maio';
-        $data['date_prev_button'] = '2024-05-15';
-        $data['date_next_button'] = '2024-05-17';
+        $carbonDate = Carbon::createFromDate($filteredDate);
+
+        $data['date_string'] = $carbonDate->format('d \d\e M');
+        $data['date_prev_button'] = $carbonDate->addDay(-1)->format('Y-m-d');
+        $data['date_next_button'] = $carbonDate->addDay(2)->format('Y-m-d');
 
         $data['tasks'] = Task::whereDate('due_date', $filteredDate)->get();
 
