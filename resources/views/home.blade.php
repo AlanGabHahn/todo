@@ -88,7 +88,7 @@
         function showAllTasks()
         {
             document.querySelectorAll('.task').forEach(function(element) {
-                    element.style.display = 'block';
+                    element.style.display = 'flex';
                 });
         }
     </script>
